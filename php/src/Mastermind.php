@@ -6,7 +6,7 @@ class Mastermind
 {
     public function evaluate(array $codeMaker, array $codeBreaker): array
     {
-        if ($codeBreaker === $codeMaker) return [1,0];
+        if ($codeBreaker === $codeMaker) return [sizeof($codeBreaker),0];
         return [0,0];
     }
 }
