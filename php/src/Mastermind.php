@@ -6,6 +6,11 @@ class Mastermind
 {
     public function evaluate(array $codeMaker, array $codeBreaker): array
     {
+
+        if (count($codeMaker) != count($codeBreaker)) {
+            throw new \Exception('La longitud de ambas combinaciones debe de ser la misma');
+        }
+
         $positionAndColor = 0;
         $color = 0;
 
