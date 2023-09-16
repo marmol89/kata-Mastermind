@@ -68,7 +68,7 @@ class MastermindTest extends TestCase
     }
 
     /** @test */
-    public function given_a_wrong_code_breaker_combination_with_three_colors_then_return_1_0_v(): void
+    public function given_a_wrong_code_breaker_combination_with_same_three_colors_then_return_1_0(): void
     {
         $game = new Mastermind();
 

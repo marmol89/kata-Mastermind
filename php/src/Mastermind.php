@@ -9,10 +9,11 @@ class Mastermind
         $positionAndColor = 0;
         $color = 0;
 
-       foreach($codeMaker as $indice => $valor){
+       foreach($codeMaker as $indice => $valor) {
             if ($codeBreaker[$indice] == $valor) {
                 $positionAndColor++;
                 unset($codeMaker[$indice]);
+                unset($codeBreaker[$indice]);
             } else if (in_array($valor, $codeBreaker)) {
                 $color++;
             }
