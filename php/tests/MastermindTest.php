@@ -46,4 +46,14 @@ class MastermindTest extends TestCase
 
         self::assertEquals([0,2], $result);
     }
+
+    /** @test */
+    public function given_a_wrong_code_breaker_combination_with_two_colors_then_return_1_0(): void
+    {
+        $game = new Mastermind();
+
+        $result = $game->evaluate(['blue','red'], ['blue','blue']);
+
+        self::assertEquals([1,0], $result);
+    }
 }
